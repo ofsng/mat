@@ -1,0 +1,7 @@
+{
+  "name": "mat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Omer'in gunluk ders arayuzu",
+  "type": "module"
+}

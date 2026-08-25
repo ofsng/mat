@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1417">
+<title>Ders</title>
+<link rel="stylesheet" href="/stil.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+</head>
+<body>
+
+<header id="ust">
+  <div class="ust-ic">
+    <div class="konu">
+      <span class="ders" id="ders">—</span>
+      <h1 id="baslik">Yükleniyor…</h1>
+      <span class="alt" id="altbilgi"></span>
+    </div>
+    <button id="menu" class="ikon" aria-label="Ayarlar" aria-expanded="false">⚙</button>
+  </div>
+
+  <div id="ayarlar" hidden>
+    <label>
+      <span>Model</span>
+      <select id="model">
+        <option value="deepseek/deepseek-v3.2">DeepSeek v3.2 — ucuz, güçlü (önerilen)</option>
+        <option value="openai/gpt-4o-mini">GPT-4o mini — dengeli</option>
+        <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B — en ucuz</option>
+        <option value="anthropic/claude-3.5-haiku">Claude 3.5 Haiku — iyi Türkçe, pahalı</option>
+      </select>
+    </label>
+    <label>
+      <span>Konu</span>
+      <select id="konu-sec"></select>
+    </label>
+    <div class="ayar-satir">
+      <button id="sifirla" class="ikinci">Sohbeti temizle</button>
+      <button id="harcama-sifirla" class="ikinci">Harcamayı sıfırla</button>
+    </div>
+    <p class="not" id="harcama">Bu cihazda harcanan: —</p>
+  </div>
+</header>
+
+<main id="akis" aria-live="polite"></main>
+
+<form id="giris">
+  <textarea id="metin" rows="1" placeholder="Cevabını yaz…"
+            autocomplete="off" enterkeyhint="send"></textarea>
+  <button id="gonder" type="submit" aria-label="Gönder">↑</button>
+</form>
+
+<script src="/app.js"></script>
+</body>
+</html>
